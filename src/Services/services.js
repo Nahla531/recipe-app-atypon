@@ -24,17 +24,13 @@ export async function getRecipesData(query, pageLimit = 3) {
 
 export async function getRecipeById(id) {
   try {
-    const recipeData = fetch(`${Base_Url}/${id}/information?apiKey=${apiKey}`);
+    const recipeData = await fetch(
+      `${Base_Url}/${id}/information?apiKey=${apiKey}`
+    );
     const res = await recipeData.json();
 
-    console.log(res);
-    //   return new RecipeDetails(
-    //     results.id,
-    //     results.image,
-    //     results.title,
-    //     results.summary,
-    //     results.sourceUrl
-    //   );
+    // console.log(res);
+    return new RecipeDetails(res.id, res.image, res.title, res.summary);
   } catch (e) {
     console.error(e);
   }

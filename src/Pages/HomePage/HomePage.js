@@ -44,6 +44,7 @@ const HomePage = () => {
         {recipes.length ? (
           <Container>
             <Row>
+              <h4>Click on what you wish to find out more</h4>
               <Recipes recipesList={recipes} />
             </Row>
           </Container>
