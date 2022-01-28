@@ -1,12 +1,12 @@
-import Recipe from "../models/recipe";
-import RecipeDetails from "../models/recipeDetail";
+import Recipe from "../Models/recipe";
+import RecipeDetails from "../Models/recipeDetail";
 
 // URL of api
 const Base_Url = process.env.REACT_APP_BASE_URL;
 // API key
 const apiKey = process.env.REACT_APP_API_KEY;
 
-export async function getRecipes(query, pageLimit = 3) {
+export async function getRecipesData(query, pageLimit = 3) {
   try {
     const fetchData = await fetch(
       `${Base_Url}complexSearch?apiKey=${apiKey}&query=${query}&number=${pageLimit}`

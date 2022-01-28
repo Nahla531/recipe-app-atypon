@@ -10,8 +10,8 @@ function App() {
       <NavBar />
       <BrowserRouter>
         <Routes>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/recipe/:id" component={RecipeDetails} />
+          <Route index element={<HomePage />} />
+          <Route path="/recipe/:id" element={<RecipeDetails />} />
         </Routes>
       </BrowserRouter>
     </div>
