@@ -27,10 +27,10 @@ const RecipeDetails = () => {
       </header>
       <Container>
         <Row>
-          <Col lg={4}>
+          <Col>
             <img src={recipeDetail?.image} alt="" />
           </Col>
-          <Col lg={8}>
+          <Col>
             <h4 className="recipe-header_summary">Recipe Summary</h4>
             <div className="summary-content">
               {readMore

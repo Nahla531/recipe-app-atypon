@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./HomePage.css";
 import SearchBtn from "../../Components/SearchBtn/SearchBtn";
 import { getRecipesData } from "../../Services/services";
 import Recipes from "../../Components/Recipes/Recipes";

@@ -1,0 +1,10 @@
+.recipeCol {
+    margin-bottom: 2rem;
+}
+
+.recipeCol a {
+    text-decoration: none;
+    color: var(--header-clr);
+}
+
+@media screen and (max-width: 767px) {}

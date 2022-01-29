@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+
+body {
+    font-family: var(--font-family) !important;
+    background-color: #f3e1e1 !important;
+    overflow-x: hidden;
+}
