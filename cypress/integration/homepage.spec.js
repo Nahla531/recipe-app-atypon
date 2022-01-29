@@ -11,6 +11,9 @@ describe("homepage test", () => {
     cy.get(".search-input").type("chicken").should("have.value", "chicken");
     //click the button
     cy.get(".btn").click();
+    //checking loading state 
+    setTimeout(() => {}, 5000);
+    cy.get("#spinner");
     //making sure that there is a result back
     cy.get(".recipeCol").should("exist");
     // trying to find specific recipe name and click on it
