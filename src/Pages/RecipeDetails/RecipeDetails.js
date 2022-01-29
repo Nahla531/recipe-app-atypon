@@ -22,21 +22,29 @@ const RecipeDetails = () => {
   }, []);
   return (
     <main role="main">
-      <header className="recipe-header">
+      <header className="recipe-header center">
         <h1>{recipeDetail?.title}</h1>
       </header>
       <Container>
         <Row>
-          <Col>
-            <img src={recipeDetail?.image} alt="" />
+          <Col >
+            <img
+              className="img-recipe"
+              fluid
+              src={recipeDetail?.image}
+              alt=""
+            />
           </Col>
           <Col>
-            <h4 className="recipe-header_summary">Recipe Summary</h4>
+            <h4 className="recipe-header_summary center">Recipe Summary</h4>
             <div className="summary-content">
               {readMore
                 ? truncate(recipeDetail?.summary, 350)
                 : recipeDetail?.summary?.replace(/(<([^>]+)>)/gi, "")}
-              <button onClick={() => setReadMore(!readMore)}>
+              <button
+                className="btn-detail"
+                onClick={() => setReadMore(!readMore)}
+              >
                 {readMore ? "read more" : " show less"}
               </button>
             </div>
