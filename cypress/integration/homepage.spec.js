@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /// <reference types="cypress" />
 
 describe("homepage test", () => {
@@ -22,5 +23,7 @@ describe("homepage test", () => {
     cy.get(".search-input").type("bdbd").should("have.value", "bdbd");
     cy.get(".btn").click();
     cy.contains("No Results Found");
+    //trying to test responsive design working on it still ..
+    cy.viewport(550, 750);
   });
 });

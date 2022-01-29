@@ -1,3 +1,7 @@
+/* eslint-disable no-undef */
+/* eslint-disable jest/valid-title */
+/* eslint-disable jest/valid-expect */
+/* eslint-disable jest/valid-expect-in-promise */
 /// <reference types="cypress" />
 describe("gets data back from api", () => {
   it("retrive first five recipes", async () => {
@@ -14,7 +18,7 @@ describe("gets data back from api", () => {
       expect(response.body.results).to.have.length(5);
     });
   });
-  // retive one recipe
+  // retrive one recipe
   it("retrive one recipe ", () => {
     cy.request(
       "GET",
