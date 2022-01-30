@@ -4,9 +4,13 @@ import { Col, Container, Row } from "react-bootstrap";
 import { getRecipeById } from "../../Services/services";
 const RecipeDetails = () => {
   const { id } = useParams();
-
   const [recipeDetail, setRecipeDetail] = useState({});
   const [readMore, setReadMore] = useState(true);
+
+  /*
+   @function takes in two parameters , string and a number of characters to be shown,
+   replace any tag with empty string and returns a substring of that string concatenated with ...
+   */
   function truncate(string, n) {
     let stringRgx = string?.replace(/(<([^>]+)>)/gi, "");
     return string?.length > n ? stringRgx?.substr(0, n - 1) + "..." : stringRgx;
@@ -27,12 +31,12 @@ const RecipeDetails = () => {
       </header>
       <Container>
         <Row>
-          <Col >
+          <Col>
             <img
               className="img-recipe"
               fluid
               src={recipeDetail?.image}
-              alt=""
+              alt={recipeDetail?.title}
             />
           </Col>
           <Col>

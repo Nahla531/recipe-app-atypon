@@ -3,7 +3,7 @@ export default class RecipeDetails {
   image;
   title;
   summary;
-  constructor(id, image, title, summary, sourceUrl) {
+  constructor(id, image, title, summary) {
     this.id = id;
     this.image = image;
     this.title = title;
