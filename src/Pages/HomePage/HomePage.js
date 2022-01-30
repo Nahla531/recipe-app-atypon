@@ -31,6 +31,7 @@ const HomePage = () => {
         <div className="search-container">
           <form className="search-form">
             <input
+              className="search-input"
               type="text"
               placeholder="Search Recipe"
               value={query}
