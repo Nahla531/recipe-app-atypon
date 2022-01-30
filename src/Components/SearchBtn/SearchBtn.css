@@ -1,0 +1,13 @@
+.btn {
+    font-size: 1.6rem;
+    border: none;
+    border-bottom: 0.1rem solid #ccc;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    height: 3rem;
+    width: 17%;
+    text-transform: uppercase;
+    background-color: #40b48e;
+    color: #fff;
+    outline: none;
+}
