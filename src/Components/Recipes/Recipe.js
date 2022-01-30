@@ -7,7 +7,7 @@ const Recipe = ({ recipe }) => {
   }
 
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card className="recipe-card">
       <Card.Img variant="top" src={recipe?.image} />
       <Card.Body>
         <Card.Title>{truncate(recipe?.title, 15)}</Card.Title>

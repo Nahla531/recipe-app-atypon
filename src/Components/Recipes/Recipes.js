@@ -8,7 +8,7 @@ const Recipes = ({ recipesList }) => {
     <>
       {recipesList.map((recipe) => {
         return (
-          <Col className="recipeCol"  key={recipe.id}>
+          <Col className="recipeCol" lg={4} md={6} sm={12} key={recipe.id}>
             <Link to={`recipe/${recipe?.id}`}>
               <Recipe recipe={recipe} />
             </Link>
