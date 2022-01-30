@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+
 import "./HomePage.css";
 import SearchBtn from "../../Components/SearchBtn/SearchBtn";
 import { getRecipesData } from "../../Services/services";
@@ -9,7 +11,12 @@ const HomePage = () => {
   const [query, setSearchQuery] = useState("");
   const [recipes, setRecipes] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
+
   const searchHandler = async () => {
+    if (!query) {
+      setErrorMsg("no search input please type what yo want to search for");
+      return <span>input search required</span>;
+    }
     try {
       setLoadingState(true);
       const recipesList = await getRecipesData(query, 15);
@@ -31,12 +38,12 @@ const HomePage = () => {
         <div className="search-container">
           <form className="search-form">
             <input
+              name="searchQuery"
               className="search-input"
               type="text"
               placeholder="Search Recipe"
               value={query}
               onChange={(e) => setSearchQuery(e.target.value)}
-              required
             />
             <SearchBtn onClick={searchHandler} label="Search" />
           </form>
@@ -54,7 +61,7 @@ const HomePage = () => {
           <></>
         )}
         {!recipes.length && !loadingState && <h4>{errorMsg}</h4>}
-        {loadingState && <Spinner animation="border" />}
+        {loadingState && <Spinner id="spinner" animation="border" />}
       </div>
     </main>
   );

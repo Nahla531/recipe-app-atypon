@@ -29,12 +29,19 @@
     outline: none;
 }
 
+.recipe-card {
+    width: 18rem;
+}
+
 @media screen and (max-width: 767px) {
     .recipe-header_summary {
         margin-top: 2rem;
     }
     .summary-content {
         margin-bottom: 2rem;
+    }
+    .recipe-card {
+        width: unset;
     }
 }
 
